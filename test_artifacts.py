@@ -1,3 +1,3 @@
-f = open('myfile.txt', 'w', 'shift_jis')
-f.write('こんにちは\n')
+f = open('myfile.txt', 'w', 'utf-8')
+f.write('hello world\n')
 f.close()
