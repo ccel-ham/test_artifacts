@@ -1,0 +1,27 @@
+name: artifacts
+
+on:
+  push:
+  #schedule:
+  # - cron: '0 20 * * *'
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+ 
+      - name: Run script
+        run: |
+          # main.pyの実行
+          python test.py
+        
+      - name: save artifacts
+        uses: actions/upload-artifact@v2
+          name: save
+          path: ./myfile.txt
