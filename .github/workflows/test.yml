@@ -17,11 +17,9 @@ jobs:
           python-version: 3.8
  
       - name: Run script
-        run: |
-          # main.pyの実行
-          python test.py
+        run: python test.py
         
-      - name: save artifacts
-        uses: actions/upload-artifact@v2
-          name: save
-          path: ./myfile.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: myfile.txt
