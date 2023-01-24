@@ -14,17 +14,6 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
-  download:
-    needs: build
-    runs-on: windows-latest
-    steps:    
-      - uses: actions/download-artifact@v3
-        with:
-          path: myfile.txt
-  script:
-    needs: download
-    runs-on: windows-latest
-    steps:        
       - name: Run script
         run: python test_artifacts.py
         
