@@ -9,6 +9,9 @@ on:
         name:
           description: 'Name'
           required: true
+        name2:
+          description: 'Name'
+          required: true
 
 jobs:
   build:
