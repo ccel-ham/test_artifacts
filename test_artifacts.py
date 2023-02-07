@@ -1,6 +1,13 @@
 import os
+import sys
+
 
 def main():
+    args = sys.argv
+    print(f"args0: {args[0]}")
+    print(f"args1: {args[1]}")
+    print(f"args2: {args[2]}")
+    
     path = './myfile.txt'
     is_file = os.path.isfile(path)
     if is_file:
