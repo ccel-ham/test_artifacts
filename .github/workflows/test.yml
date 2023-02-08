@@ -25,7 +25,7 @@ jobs:
       - name: print log
         run: echo "Hello! ${{ github.event.inputs.name }}"
       - name: Run script
-        run: python test_artifacts.py "${{ github.event.inputs.name }}"
+        run: python test_artifacts.py "${{ github.event.inputs.name }}" "${{ github.event.inputs.name2 }}"
         
       - uses: actions/upload-artifact@v3
         with:
